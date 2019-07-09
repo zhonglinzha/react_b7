@@ -26,6 +26,7 @@ module.exports = {
             '@dll': path.resolve('./src/dll'),
             '@page': path.resolve('./src/page'),
             '@store': path.resolve('./src/store'),
+            '@img': path.resolve('./src/image'),
         },
     },
     module: {
@@ -37,17 +38,17 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
-                test: /\.s?css$/,
+                test: /\.(jpg|jpeg|png|gif)$/,
                 use: [
-                    {loader: 'style-loader'},
-                    {loader: 'css-loader'},
-                    {loader: 'postcss-loader'},
-                    {loader: 'sass-loader'},
-                    {loader: 'test-loader', options: {
-                        a:1,
-                        b:2
-                    }},
-                ],
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 1024 * 8,
+                            name: '[name].[hash:8].[ext]',
+                            outputPath: 'img/',
+                        }
+                    }
+                ]
             },
         ]
     },

@@ -13,4 +13,30 @@ module.exports = webpackMerge(base,{
         compress: true,
         open: false,
     },
+    module: {
+        rules: [
+            {
+                test: /\.s?css$/,
+                use: [
+                    {loader: 'style-loader'},
+                    {loader: 'css-loader', options: {
+                        modules: true,
+                    }},
+                    {loader: 'postcss-loader'},
+                    {loader: 'sass-loader'},
+                ],
+                include: /src/,
+            },
+            {
+                test: /\.s?css$/,
+                use: [
+                    {loader: 'style-loader'},
+                    {loader: 'css-loader'},
+                    {loader: 'postcss-loader'},
+                    {loader: 'sass-loader'},
+                ],
+                exclude: /src/,
+            },
+        ]
+    },
 });
