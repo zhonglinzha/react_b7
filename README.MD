@@ -43,8 +43,8 @@ optimize-css-assets-webpack-plugin //压缩css
 
 js
 
-terser-webpack-plugin
-
+terser-webpack-plugin //js压缩
+compression-webpack-plugin //gzip压缩
 
 img
 url-loader
