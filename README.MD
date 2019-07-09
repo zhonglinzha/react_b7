@@ -25,9 +25,7 @@ html 页面适配rem
 (window.__setFontSize__=function(){document.documentElement.style.fontSize = Math.min(640, Math.max(document.documentElement.clientWidth, 320)) / 320 * 14 + 'px'})()
 window.addEventListener('resize', window.__setFontSize__);
 
-
-
-
+html-webpack-plugin
 
 css
 css-loader
@@ -39,3 +37,20 @@ node-sass
 postcss-loader
 autoprefixer
 postcss.config.js 配置文件
+
+mini-css-extract-plugin //抽离css
+optimize-css-assets-webpack-plugin //压缩css
+
+js
+
+terser-webpack-plugin
+
+
+img
+url-loader
+file-loader
+
+asset 
+add-asset-html-webpack-plugin
+clean-webpack-plugin
+copy-webpack-plugin

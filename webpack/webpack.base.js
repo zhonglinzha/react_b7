@@ -15,6 +15,9 @@ module.exports = {
         publicPath: '',//cdnl路径
         chunkFilename: 'js/[name].[chunkhash:8].chunk.js',//chunk文件的名字
     },
+    resolveLoader: {
+        modules: [path.resolve('./src/loaders'), 'node_modules'],//如果自定义了loader 用这个配置路径
+    },
     resolve: {
         extensions: ['.js','.jsx','.json'],
         modules: ['node_modules'],
@@ -40,6 +43,10 @@ module.exports = {
                     {loader: 'css-loader'},
                     {loader: 'postcss-loader'},
                     {loader: 'sass-loader'},
+                    {loader: 'test-loader', options: {
+                        a:1,
+                        b:2
+                    }},
                 ],
             },
         ]
