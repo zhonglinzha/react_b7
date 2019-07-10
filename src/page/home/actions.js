@@ -7,6 +7,7 @@ const home = data => ({
 });
 
 const homeAction = param => (dispatch, getState) => new Promise(() => {
+	getState();
 	dispatch(home(param));
 });
 

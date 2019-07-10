@@ -45,6 +45,7 @@ js
 
 terser-webpack-plugin //js压缩
 compression-webpack-plugin //gzip压缩
+happypack//加速打包
 
 img
 url-loader
@@ -54,3 +55,16 @@ asset
 add-asset-html-webpack-plugin
 clean-webpack-plugin
 copy-webpack-plugin
+
+gzip压缩
+compression-webpack-plugin
+
+
+stylelint
+
+stylelint
+stylelint-order //css顺序
+stylelint-config-recommended //官方标准 
+stylelint-config-standard //官方标准
+stylelint-webpack-plugin
+5个够用

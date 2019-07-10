@@ -7,6 +7,7 @@ const login = data => ({
 });
 
 const loginAction = param => (dispatch, getState) => new Promise(() => {
+	getState();
 	dispatch(login(param));
 });
 

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as actions from './actions';
-import style from './style.scss';
+import { Button } from 'antd-mobile';
 
 import test from '@img/test.png';
+import * as actions from './actions';
+import style from './style.scss';
 
 @connect(
 	state => state,
@@ -19,8 +20,10 @@ class Login extends Component {
 	render() {
 		return (
 			<div>
+				{/* <DatePicker /> */}
+				<Button type="primary">Primary</Button>
 				<h1 className={style.login}>Login</h1>
-				<img src={test} width='50px' height='50px' />
+				<img src={test} width='50px' height='50px' alt='' />
 			</div>
 		);
 	}

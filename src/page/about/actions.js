@@ -7,6 +7,7 @@ const about = data => ({
 });
 
 const aboutAction = param => (dispatch, getState) => new Promise(() => {
+	getState();
 	dispatch(about(param));
 });
 

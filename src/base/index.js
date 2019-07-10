@@ -4,11 +4,12 @@ import { Provider } from 'react-redux';
 import APP from './app';
 import store from '@store';
 import './index.scss';
+
 window.addEventListener('resize', window.__setFontSize__);
 const renderApp = () => {
 	ReactDOM.render(
 		<Provider store={store}>
-			<APP/>
+			<APP />
 		</Provider>,
 		document.getElementById('root'),
 	);
