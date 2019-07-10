@@ -30,6 +30,7 @@ module.exports = webpackMerge(base,{
                 use: [
                     MiniCssExtractPlugin.loader,                    
                     {loader: 'css-loader', options: {
+                        importLoaders: 2,
                         modules: {
                             localIdentName: '[local]_[hash:base64:8]',
                         }
@@ -53,7 +54,7 @@ module.exports = webpackMerge(base,{
     },
     plugins: [
         // new CompressionWebpackPlugin(),//gzip压缩配合nginx
-        new CleanWebpackPlugin({}),//清除打包后的dist文件夹
+        new CleanWebpackPlugin(),//清除打包后的dist文件夹
         new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify('production')}),//设置打包环境
         new MiniCssExtractPlugin({//抽离css
             filename: 'css/[name].[hash:8].css',

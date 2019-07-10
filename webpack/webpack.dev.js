@@ -44,6 +44,7 @@ module.exports = webpackMerge(base,{
             use: [
                 {loader: 'style-loader'},
                 {loader: 'css-loader', options: {
+                    importLoaders: 2,//对于使用了@import的scss文件再次使用下面两个loader
                     modules: {
                         localIdentName: '[local]_[hash:base64:8]',
                     }
