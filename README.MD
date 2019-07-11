@@ -68,3 +68,7 @@ stylelint-config-recommended //官方标准
 stylelint-config-standard //官方标准
 stylelint-webpack-plugin
 5个够用
+
+
+sideEffects: false 
+optimization.usedExports：true
