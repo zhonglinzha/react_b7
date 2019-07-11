@@ -2,3 +2,4 @@ node_modules
 dist
 webpack
 src/base/app.js
+src/base/router.js
