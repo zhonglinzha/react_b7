@@ -17,11 +17,16 @@ class Login extends Component {
 		console.log(this);
 	}
 
+	goToPage = () => {
+		const { history } = this.props;
+		history.push({pathname: '/home', query: {page: 1}});
+	}
+
 	render() {
 		return (
 			<div>
 				{/* <DatePicker /> */}
-				<Button type="primary">Primary</Button>
+				<Button type="primary" onClick={this.goToPage}>Primary</Button>
 				<h1 className={style.login}>Login</h1>
 				<img src={test} width='50px' height='50px' alt='' />
 			</div>
