@@ -4,6 +4,8 @@
 @babel/plugin-proposal-decorators 给类添加注解
 @babel/plugin-proposal-export-default-from 处理default问题
 
+@babel/plugin-syntax-dynamic-import 动态引入插件 魔法注释起作用
+
 polyfill 三种方案
 1、@babel/polyfill  全局polyfill 会污染全局和原生对象 应用中使用
 2、@babel/plugin-transform-runtime(devDependency) 与 @babel/runtime(dependency)
@@ -70,5 +72,11 @@ stylelint-webpack-plugin
 5个够用
 
 
-sideEffects: false 
+sideEffects: false
 optimization.usedExports：true
+
+
+预取/预加载模块(prefetch/preload) 
+import(/* webpackPreload: true */ 'ChartingLibrary');
+import(/* webpackPrefetch: true */ 'LoginModal');
+一般使用webpackPrefetch 但webpackPrefetch有兼容问题
