@@ -4,14 +4,14 @@ export default [
   {
     path: "/",
     exact: true,
-    component: loadable(() => import(/* webpackChunkName: 'login' */'@page/login'))
+    component: loadable(() => import( /* webpackPrefetch: true */ /* webpackChunkName: 'login' */'@page/login'))
   },
   {
     path: "/home",
-    component: loadable(() => import(/* webpackChunkName: 'home' */'@page/home')),
+    component: loadable(() => import( /* webpackPrefetch: true */ /* webpackChunkName: 'home' */'@page/home')),
   },
   {
     path: "/about",
-    component: loadable(() => import(/* webpackChunkName: 'about' */'@page/about')),
+    component: loadable(() => import( /* webpackPrefetch: true */ /* webpackChunkName: 'about' */'@page/about')),
   },
 ];
