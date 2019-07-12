@@ -29,6 +29,7 @@ class Login extends Component {
 				<Button type="primary" onClick={this.goToPage}>Primary</Button>
 				<h1 className={style.login}>Login</h1>
 				<img src={test} width='50px' height='50px' alt='' />
+				<div className={style.but}>123</div>
 			</div>
 		);
 	}
