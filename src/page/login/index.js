@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Button } from 'antd-mobile';
+// import * as qs from 'qs';
+// import { Base64 } from 'js-base64';
+import base64 from 'base-64';
 
 import test from '@img/test.png';
 import * as actions from './actions';
@@ -19,7 +22,7 @@ class Login extends Component {
 
 	goToPage = () => {
 		const { history } = this.props;
-		history.push({pathname: '/home', query: {page: 1}});
+		history.push({pathname: '/home', search: base64.encode({a: { c: '1'}, b: 2})});
 	}
 
 	render() {

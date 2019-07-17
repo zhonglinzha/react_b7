@@ -19,6 +19,9 @@ module.exports = {
         chunkFilename: 'js/[name].[chunkhash:8].chunk.js',//chunk文件的名字
     },
     optimization: { 
+        runtimeChunk: {
+            name: 'runtime'
+        },
         // usedExports: true, // 这个是用来作树摇晃用的 "sideEffects": ["*.scss"]
         noEmitOnErrors: true,//出错了就停止编译
         splitChunks: {//优化项 其实这里一般都是默认配置就可以 只是把chunks: 'all' 改一下
